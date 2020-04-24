@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Exchange</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="box">
-        <H1>Welcome to the World Currency Exchange</H1>
-        <h3>Click the button below to get your Dino Words:</h3>
-        <br>
-        <button id="button" type="button" class="btn btn-dark">Show Currency</button>
-        <br>
-        <div id="showCurr"></div>
-      
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Exchange</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <H1>Welcome to the World Currency Exchange</H1>
+
+      <br>
+      <label for="amountUS">Enter amount in USD:</label>
+      <input id="amountUS" type="text">
+      <br>
+      <label for="exchangeInput">Enter desired currency code:(See codes below)</label>
+      <input id="exchangeInput" type="text">
+       <br>
+
+      <button id="button" type="button" class="btn btn-dark">Show Currency</button>
+      <br>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="output">Output here</div>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

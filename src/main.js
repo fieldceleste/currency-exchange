@@ -5,15 +5,24 @@ import $ from "jquery";
 import { CurrencyEx } from './currency.js';
 
 $(document).ready(function () {
+  $('#button').click(function() {
+    const amount = $('#amountUS').val();
+    $('#amountUS').val("");
 
-
-  $("#button").click(function () {
     (async () => {
-      let dinoGif = new DinoIpsum();
-      const response = await dinoGif.getQuote();
-      const gifResponse = await dinoGif.getGif();
-      console.log(gifResponse)
-      $('#showGif').html(`<img src="${gifResponse}" alt="a random dino gif">"${response[0]}"`);
+      let currencyExchange = new CurrencyEx();
+      const response = await currencyExchange.getCurrencybyAmount(amount);
+      getElements(response);
     })();
-  });
+
+    function getElements(response) {
+      if (response) {
+        $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
+        $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
+      } else {
+        $('.showHumidity').text(`There was an error handling your request.`);
+        $('.showTemp').text(`Please check your inputs and try again!`);
+      }
+    }
+  })
 });
