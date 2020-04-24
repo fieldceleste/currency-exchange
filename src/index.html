@@ -13,8 +13,8 @@
       <h1>Welcome to the World Currency Exchange</h1>
       <br>
       <form id="currency">
-        <label for="amountUS">Enter amount in USD:</label>
-        <input id="amountUS" type="number">
+        <label for="baseUS">Enter amount in USD:</label>
+        <input id="baseUS" type="number">
         <br>
         <label for="exchangeInput">Select a countries currency below:</label>
         <select id="exchangeInput" class=form-control type="text">
@@ -25,14 +25,15 @@
           <option value="JPY">Japanese Yen</option>
           <option value="MXN">Mexican Peso</option>
         </select>
+        <button id="resultCurrency" type="submit" form="currency" class="btn btn-dark">Show Currency</button>
       </form>
-        <button id="button" type="button" class="btn btn-dark">Show Currency</button>
-        <br>   
-      
-          <div class="output">Output here</div>
-        </div>
-      </div>
+      <br> <div class="errors"></div>
+      <div id="result">
+      <span id="baseUS">...</span>
+      <span id="resultExchange">...</span>
+       <span id="resultExchange">..</span>
     </div>
+   </div>
   </div>
 </body>
 
