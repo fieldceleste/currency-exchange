@@ -5,17 +5,6 @@ import $ from "jquery";
 import { CurrencyEx } from './currency.js';
 
 
-let currency = [ 'USD','EUR'];
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function () {
   $('#button').click(function() {
     const amount = $('#amountUS').val();
