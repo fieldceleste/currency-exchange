@@ -1,21 +1,17 @@
-
-
-
-
-
-//--Just an example
-export function pingPong(goal) {
-  var output = [];
-  for (var i = 1; i <= goal; i++) {
-    if (i % 15 === 0) {
-      output.push("ping-pong");
-    } else if (i % 3 === 0) {
-      output.push("ping");
-    } else if (i % 5 === 0) {
-      output.push("pong");
-    } else  {
-      output.push(i);
+ export class CurrencyEx {
+    async getCurrency(rateEX, ) {
+      try {
+        let response = await fetch ("https://alexnormand-dino-ipsum.p.rapidapi.com/?format=html&words=3&paragraphs=3");
+        let jsonifiedResponse;
+        if (response.ok && response.status == 200) {
+          jsonifiedResponse = await response.json();
+        } else { 
+          jsonifiedResponse = false; 
+        } 
+        return jsonifiedResponse;
+      } catch (error) {
+        console.log(error);
+        return false; 
+      }
     }
   }
-  return output;
-}
