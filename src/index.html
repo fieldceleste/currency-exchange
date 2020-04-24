@@ -10,18 +10,24 @@
 <body>
   <div class="container">
     <div class="box">
-      <H1>Welcome to the World Currency Exchange</H1>
-
+      <h1>Welcome to the World Currency Exchange</h1>
       <br>
-      <label for="amountUS">Enter amount in USD:</label>
-      <input id="amountUS" type="text">
-      <br>
-      <label for="exchangeInput">Enter desired currency code:(See codes below)</label>
-      <input id="exchangeInput" type="text">
-       <br>
-
-      <button id="button" type="button" class="btn btn-dark">Show Currency</button>
-      <br>
+      <form id="currency">
+        <label for="amountUS">Enter amount in USD:</label>
+        <input id="amountUS" type="number">
+        <br>
+        <label for="exchangeInput">Select a countries currency below:</label>
+        <select id="exchangeInput" class=form-control type="text">
+          <br>
+          <option value="GBP">Pounds Sterling</option>
+          <option value="EUR">Euros</option>
+          <option value="CAD">Canadian Dollars</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="MXN">Mexican Peso</option>
+        </select>
+      </form>
+        <button id="button" type="button" class="btn btn-dark">Show Currency</button>
+        <br>   
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <div class="output">Output here</div>

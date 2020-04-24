@@ -4,24 +4,41 @@ import './styles.css';
 import $ from "jquery";
 import { CurrencyEx } from './currency.js';
 
+
+let currency = [ 'USD','EUR'];
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
   $('#button').click(function() {
     const amount = $('#amountUS').val();
+    console.log(amount)
+    const currency = $('#exchangeInput').val();
+    console.log(currency)
     $('#amountUS').val("");
+    $('#exchangeInput').val("");
 
     (async () => {
       let currencyExchange = new CurrencyEx();
-      const response = await currencyExchange.getCurrencybyAmount(amount);
+      const response = await currencyExchange.getCurrencybyAmount(amount,currency);
+      console.log(response)
       getElements(response);
     })();
 
     function getElements(response) {
       if (response) {
-        $('.showHumidity').text(`The humidity in ${city} is ${response.main.humidity}%`);
-        $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
+        $('.output').text(`Your currency exchange in ${currency} is $ ${response.amount.currency}.`);
+  
+
       } else {
-        $('.showHumidity').text(`There was an error handling your request.`);
-        $('.showTemp').text(`Please check your inputs and try again!`);
+        $('.output').text(`malformed-request, your input was not valid`);
       }
     }
   })
