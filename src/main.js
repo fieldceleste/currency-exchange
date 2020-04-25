@@ -8,9 +8,8 @@ $(document).ready(function () {
   $("#currency").submit(function (event) {
   event.preventDefault();
    const amount = $('#baseUS').val();
-    // console.log(amount);
    const currencyResult = $('#currencyType').val();
-    // console.log(currencyResult);
+    
     
 
     (async () => {
@@ -25,16 +24,11 @@ $(document).ready(function () {
       if (response.conversion_rates[currencyResult]) {
           let rate = response.conversion_rates[currencyResult];
           let exchangeCon = (amount * rate).toFixed(2);
-          $("#showAmount").text(amount);
-          $("#newAmount").text(" " + exchangeCon + " " + currencyResult);
+          $("#displayResults").text(" " + exchangeCon + " " + currencyResult);
            $("#result").show();
-
-        } else {
+      } else {
         $('.output').text(`malformed-request, your input was not valid`);
       }
     }
   });
 });
-
-
-        // $('.output').text(`Your currency exchange in ${currency} is $ ${response.amount.currency}.`);
