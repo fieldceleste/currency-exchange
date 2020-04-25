@@ -42,13 +42,13 @@ _No known bugs at this time_
 
 |Behavior|Input|Output|
 | :-----|:-----|:-----|
-| It will take an amount in US currecy and display it in Euros (Version 2020)| $ 10.00 | [€ 9.26] |
-| It will take amount in US currecy and display it in Pounds (Version 2020) |$ 10.00| [£ 8.11] |
-| It will take amount in US currecy and display it in Japanense Yen (Version 2020)| $ 10.00 | [¥ 1,074.56] |
-| It will take amount in US currecy and display it in Canadian dollars (Version 2020)| $ 10.00 | [$ 14.11] |
-| It will take amount in US currecy and display it in Mexican Peso (Version 2020) | $10.00 | [$ 249.79 ] |
-| If there is an error with the request, the application should report an error stating "Your input value is invalid, please select another"|
-| If the query repsonse does not recognize the currency inputed, you should receive a message saying " The currency does not exsist"|
+| It will take an amount in US currecy and display it in Euros (Version 2020)|$10.00| [€9.26]|
+| It will take amount in US currecy and display it in Pounds (Version 2020) |$10.00|[£8.11]|
+| It will take amount in US currecy and display it in Japanense Yen (Version 2020)|$10.00|[¥1,074.56]|
+| It will take amount in US currecy and display it in Canadian dollars (Version 2020)|$10.00|[$14.11]|
+| It will take amount in US currecy and display it in Mexican Peso (Version 2020) |$10.00|[$249.79]|
+| If there is an error with the request, the application should report an error stating "malformed-request, your input was not valid"|
+| If the query repsonse does not recognize the currency inputed, you should receive a message saying "unknown-code"|
 
 ## Legal
 

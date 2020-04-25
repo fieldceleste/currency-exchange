@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="contanier">
+  <div class="contanier-fluid">
     <div class="jumbotron">
       <h1>The World Currency Exchanger</h1>
     </div>
@@ -16,17 +16,18 @@
 
 
     <form id="currency">
-      <div class="row">
-        <div class="col-md-2">
-          <label for="baseUS" id="baseUS">Enter amount in USD:</label>
-          <input id="baseUS" type="number" min=0 step=".01" required>
+      <div class="row text-center">
+        <div class="col-md-3">
+          <label for="baseUS">Enter amount in USD:</label>
+          <input id="baseUS" type="number" min=0 required>
         </div>
       </div>
     
 
 
       <div class="col-md-4">
-        <label for="currencyType" id="currencyType">Select a countries currency below:</label>
+        
+        <label for="currencyType">Select a countries currency below:</label>
         <select id="currencyType" class=form-control type="text">
           <br>
           <option value="AED">UAE Dirham</option>
@@ -82,16 +83,16 @@
           <option value="ZAR">South African Rand</option>
         </select>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-12">
         <button type="submit" class="btn btn-success">Show Conversion:</button>
       </div>
     </div>
     </form>
-    <!-- <br> <div class="errors"></div> -->
+  
     <div id="result">
     
      <p> Your currency conversion is: <span id="displayResults"></span>.</p> 
-    </div>
+    
    </div>
   </div>
 </body>

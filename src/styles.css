@@ -1,3 +1,43 @@
 body {
-  background-color: #7FDBFF;
+  background-image: url("http://www.seekgif.com/download/money-ppt-background-662"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:top 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  justify-content: center;
+}
+
+#result{
+  display: none;
+  text-align: center;
+  border: goldenrod solid 3px;
+  margin-top: 30px;
+  margin-left:300px;
+  margin-right: 300px;
+  font-size: 20px;
+}
+.jumbotron{
+  text-align: center;
+  background-color: goldenrod;
+}
+.col-md-3 {
+  margin-left: 250px;
+  font-size: 20px;
+  text-align: center;
+}
+.col-md-4{
+  margin-top: 30px;
+  margin-left: 240px;
+  font-size: 20px;
+  text-align: center;
+}
+.btn{
+  margin-top: 50px;
+  margin-left: 250px;
+}
+#currency{
+  padding: 10px;
+  border:rgb(117, 184, 16) 2px solid;
+  margin-left: 400px;
+  margin-right: 400px;
 }
