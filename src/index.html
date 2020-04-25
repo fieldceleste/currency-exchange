@@ -8,16 +8,25 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="box">
-      <h1>Welcome to the World Currency Exchange</h1>
-      <br>
-      <form id="currency">
-        <label for="baseUS">Enter amount in USD:</label>
-        <input id="baseUS" type="number">
-        <br>
-        <label for="exchangeInput">Select a countries currency below:</label>
-        <select id="exchangeInput" class=form-control type="text">
+  <div class="contanier">
+    <div class="jumbotron">
+      <h1>The World Currency Exchanger</h1>
+    </div>
+
+
+
+    <form id="currency">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="baseUS">Enter amount in USD:</label>
+          <input id="baseUS" type="number" min=0 required>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <label for="currencyType">Select a countries currency below:</label>
+        <select id="currencyType" class=form-control type="text">
           <br>
           <option value="GBP">Pounds Sterling</option>
           <option value="EUR">Euros</option>
@@ -25,13 +34,16 @@
           <option value="JPY">Japanese Yen</option>
           <option value="MXN">Mexican Peso</option>
         </select>
-        <button id="resultCurrency" type="submit" form="currency" class="btn btn-dark">Show Currency</button>
-      </form>
-      <br> <div class="errors"></div>
-      <div id="result">
-      <span id="baseUS">...</span>
-      <span id="exchangeInput">...</span>
-       <span id="resultExchange">..</span>
+      </div>
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-dark">Show Conversion:</button>
+      </div>
+    </div>
+    </form>
+    <!-- <br> <div class="errors"></div> -->
+    <div id="result">
+    
+     <p> Your currency conversion is: <span id="currencyTotal"></span>.</p> 
     </div>
    </div>
   </div>

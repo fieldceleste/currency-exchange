@@ -7,29 +7,28 @@ import { CurrencyEx } from './currency.js';
 $(document).ready(function () {
   $("#currency").submit(function (event) {
   event.preventDefault();
-
    const amount = $('#baseUS').val();
-    console.log(amount);
-   const currencyResult = $('#exchangeInput').val();
-    console.log(currencyResult);
+    // console.log(amount);
+   const currencyResult = $('#currencyType').val();
+    // console.log(currencyResult);
     
 
     (async () => {
-      let currencyExchange = new CurrencyEx(amount,currencyResult);
-      const response = await currencyExchange.getCurrencybyRates();
-      getElements(response,currencyResult,amount);
+      let currency = new CurrencyEx();
+      const response = await currency.getCurrencybyRates();
+      getElements(response);
     })();
 
 
 
-    function getElements(response,currencyResult,amount) {
-      if (response) {
-          $("baseUS").text(amount);
-          console.log(amount);
-          $("#exchangeInput").text(`${response.conversion_rates}` * amount).toFixed(2);
-          console.log(conversion_rates)
-          $("#resultExchange").text(currencyResult);
-          console.log(currencyResult)
+    function getElements(response) {
+      if (response.conversion_rates[currencyResult]) {
+          let rate = response.conversion_rates[currencyResult];
+          let exchangeCon = (amount * rate).toFixed(2);
+          $("#showAmount").text(amount);
+          $("#newAmount").text(" " + exchangeCon + " " + currencyResult);
+           $("#result").show();
+
         } else {
         $('.output').text(`malformed-request, your input was not valid`);
       }
